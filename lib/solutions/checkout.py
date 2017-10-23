@@ -1,5 +1,5 @@
 # noinspection PyUnusedLocal
-letter_list = ["A","B","C","D", "E"]
+letter_list = ["A","B","C","D", "E", "F"]
 def illegal_input(item_list):
 	for it in letter_list:
 		item_list = item_list.replace(it, "")
@@ -20,6 +20,7 @@ def checkout(skus):
 	c_price = 20
 	d_price = 15
 	e_price = 40
+	e_price = 10
 
 	five_a_price = (a_price * int(skus.count("A") / 5) * 5 - int(skus.count("A") / 5) * 50)
 	left_a_count = skus.count("A") - int(skus.count("A") / 5) * 5
