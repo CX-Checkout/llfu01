@@ -110,8 +110,7 @@ def checkout(skus):
 	total_price = total_price + q_price * real_q_count - 10 * int(real_q_count / 3)
 
 	total_price = total_price + r_price * skus.count("R")
-	total_price = total_price + s_price * skus.count("S")
-	total_price = total_price + t_price * skus.count("T")
+	
 	total_price = total_price + (u_price * int(skus.count("U") / 4) * 3) + (u_price * (skus.count("U") % 4))
 
 	five_v_price = (v_price * int(skus.count("V") / 3) * 3 - int(skus.count("V") / 3) * 20)
@@ -121,6 +120,9 @@ def checkout(skus):
 	total_price =  total_price + five_v_price + three_v_price + v_price * double_left_v_count
 
 	total_price = total_price + w_price * skus.count("W")
+	
+	total_price = total_price + s_price * skus.count("S")
+	total_price = total_price + t_price * skus.count("T")
 	total_price = total_price + x_price * skus.count("X")
 	total_price = total_price + y_price * skus.count("Y")
 	total_price = total_price + z_price * skus.count("Z")
