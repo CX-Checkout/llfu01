@@ -120,24 +120,18 @@ def checkout(skus):
 	total_price =  total_price + five_v_price + three_v_price + v_price * double_left_v_count
 
 	total_price = total_price + w_price * skus.count("W")
-	
-	total_price = total_price + s_price * skus.count("S")
-	total_price = total_price + t_price * skus.count("T")
-	total_price = total_price + x_price * skus.count("X")
-	total_price = total_price + y_price * skus.count("Y")
-	total_price = total_price + z_price * skus.count("Z")
 
 	list_str = list("STXYZ")
 	for it in letter_list:
 		if it not in list_str:
 			skus = skus.replace(it, "")
 
+	extra_count = int(len(skus) / 3)
+	last_index = len(skus) - extra_count * 3
+	sku = skus[-last_index:]
+
+	print sku, extra_count, sku, last_index
 	total_price += extra_count * 45
-
-	extra_count = int(len(sku) / 3)
-	last_index = len(sku) - extra_count * 3
-	sku = sku[-last_index:]
-
 	for it in list(sku):
 		if it == "S":
 			total_price += s_price
