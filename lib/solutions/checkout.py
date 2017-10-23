@@ -127,15 +127,36 @@ def checkout(skus):
 	total_price = total_price + y_price * skus.count("Y")
 	total_price = total_price + z_price * skus.count("Z")
 
-	list_str = list["STXYZ"]
+	list_str = list("STXYZ")
 	for it in letter_list:
 		if it not in list_str:
 			skus = skus.replace(it, "")
 
+	total_price += extra_count * 45
+
 	extra_count = int(len(sku) / 3)
 	last_index = len(sku) - extra_count * 3
 	sku = sku[-last_index:]
+
+	for it in list(sku):
+		if it == "S":
+			total_price += s_price
+
+		elif it == "T":
+			total_price += t_price
+
+		elif it == "X":
+			total_price += x_price
+
+		elif it == "Y":
+			total_price += y_price
+
+		elif it == "Z":
+			total_price += z_price
+
 	return total_price
 
 if __name__ == '__main__':
-    print checkout("ABCDE")
+    print checkout("STX")
+    print checkout("STXSTX")
+    print checkout("SSS")
