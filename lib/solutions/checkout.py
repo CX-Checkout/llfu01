@@ -133,7 +133,8 @@ def checkout(skus):
 			skus = skus.replace(it, "")
 
 	extra_count = int(len(sku) / 3)
-	
+	last_index = len(sku) - extra_count * 3
+	sku = sku[-last_index:]
 	return total_price
 
 if __name__ == '__main__':
