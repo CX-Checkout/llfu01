@@ -64,7 +64,7 @@ def checkout(skus):
 	total_price = total_price + c_price * skus.count("C")
 	total_price = total_price + d_price * skus.count("D")
 	total_price = total_price + e_price * skus.count("E")
-
+	
 	total_price = total_price + (f_price * int(skus.count("F") / 3) * 2) + (f_price * (skus.count("F") % 3))
 	total_price = total_price + g_price * skus.count("G")	
 
@@ -72,13 +72,13 @@ def checkout(skus):
 	left_h_count = skus.count("H") - int(skus.count("H") / 10) * 10
 	three_h_price = (h_price * int(left_h_count / 5) * 5 - int(left_a_count / 5) * 5)
 	double_left_h_count = left_h_count - int(left_h_count / 5) * 5
-	total_price =  five_h_price + three_h_price + h_price * double_left_h_count
+	total_price = total_price + five_h_price + three_h_price + h_price * double_left_h_count
 
 	total_price = total_price + i_price * skus.count("I")	
 	total_price = total_price + j_price * skus.count("J")	
 	total_price = total_price + k_price * int(skus.count("K") / 2) * 2 - k_price * (skus.count("K") % 2)
 	total_price = total_price + l_price * skus.count("L")	
-
+	
 	m_count = 0
 	m_count += skus.count("N") / 3
 	real_m_count = 0
@@ -119,12 +119,11 @@ def checkout(skus):
 	left_v_count = skus.count("V") - int(skus.count("V") / 3) * 3
 	three_v_price = (v_price * int(left_v_count / 2) * 2 - int(left_v_count / 2) * 10)
 	double_left_v_count = left_v_count - int(left_v_count / 2) * 2
-	total_price =  five_v_price + three_v_price + v_price * double_left_v_count
+	total_price =  total_price + five_v_price + three_v_price + v_price * double_left_v_count
 
-	total_price = total_price + t_price * skus.count("X")
-	total_price = total_price + t_price * skus.count("Y")
-	total_price = total_price + t_price * skus.count("Z")
-
+	total_price = total_price + x_price * skus.count("X")
+	total_price = total_price + y_price * skus.count("Y")
+	total_price = total_price + z_price * skus.count("Z")
 
 	return total_price
 
