@@ -32,7 +32,3 @@ def checkout(skus):
     	total_price -= 15
 
     return total_price
-
-if __name__ == '__main__':
-    print checkout("ABCD")
-    print checkout("AFF")
