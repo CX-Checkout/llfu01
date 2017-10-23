@@ -76,7 +76,7 @@ def checkout(skus):
 
 	total_price = total_price + i_price * skus.count("I")	
 	total_price = total_price + j_price * skus.count("J")	
-	total_price = total_price + k_price * int(skus.count("K") / 2) * 2 - k_price * (skus.count("K") % 2)
+	total_price = total_price + k_price * int(skus.count("K") / 2) * 2 + k_price * (skus.count("K") % 2)
 	total_price = total_price + l_price * skus.count("L")	
 	
 	m_count = 0
@@ -94,7 +94,7 @@ def checkout(skus):
 	total_price = total_price + n_price * skus.count("N")
 	total_price = total_price + o_price * skus.count("O")
 
-	total_price = total_price + p_price * int(skus.count("P") / 5) * 5 - p_price * (skus.count("P") % 5)
+	total_price = total_price + p_price * int(skus.count("P") / 5) * 5 + p_price * (skus.count("P") % 5)
 
 	q_count = 0
 	q_count += skus.count("R") / 3
