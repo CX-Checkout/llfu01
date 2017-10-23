@@ -1,5 +1,5 @@
 # noinspection PyUnusedLocal
-letter_list = ["A","B","C","D"]
+letter_list = ["A","B","C","D", "E"]
 def illegal_input(item_list):
 	for it in letter_list:
 		item_list = item_list.replace(it, "")
