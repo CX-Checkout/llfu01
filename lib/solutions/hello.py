@@ -1,3 +1,3 @@
 # noinspection PyUnusedLocal
 def hello(friend_name):
-    raise NotImplementedError()
+    return friend_name
