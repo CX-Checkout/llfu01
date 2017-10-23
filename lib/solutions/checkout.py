@@ -76,7 +76,7 @@ def checkout(skus):
 
 	total_price = total_price + i_price * skus.count("I")	
 	total_price = total_price + j_price * skus.count("J")	
-	total_price = total_price + k_price * int(skus.count("K") / 2) * 2 + k_price * (skus.count("K") % 2)
+	total_price = total_price + 150 * int(skus.count("K") / 2) + k_price * (skus.count("K") % 2)
 	total_price = total_price + l_price * skus.count("L")	
 	
 	m_count = 0
