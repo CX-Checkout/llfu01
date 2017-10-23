@@ -20,8 +20,19 @@ def checkout(skus):
     c_price = 20
     d_price = 15
 
-    
+    total_price = total_price + a_price * skus.count("A")
+    total_price = total_price + b_price * skus.count("B")
+    total_price = total_price + c_price * skus.count("C")
+    total_price = total_price + d_price * skus.count("D")
+
+    if skus.count("A") >= 3:
+    	total_price -= 20
+
+    if skus.count("B") >= 3:
+    	total_price -= 15
+
+    return total_price
+
 if __name__ == '__main__':
-    checkout("A")
-    checkout("A")
-    checkout("A")
+    print checkout("ABCD")
+    print checkout("AFF")
