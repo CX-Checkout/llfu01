@@ -130,8 +130,13 @@ def checkout(skus):
 
 	total_count = 0
 	for it in list_str:
-		if (int(len(skus) / 3) == 0) and (len(skus) % 3 != 0):
+		if len(skus) = 3:
+			total_count = 3
+			skus = []
 			break
+
+		if len(skus) < 3:
+			
 
 		while True:
 			try:
