@@ -25,7 +25,7 @@ def checkout(skus):
 	h_price = 10
 	i_price = 35
 	j_price = 60
-	k_price = 80
+	k_price = 70
 	l_price = 90
 	m_price = 15
 	n_price = 40
@@ -33,15 +33,14 @@ def checkout(skus):
 	p_price = 50
 	q_price = 30
 	r_price = 50
-	s_price = 30
+	s_price = 20
 	t_price = 20
 	u_price = 40
 	v_price = 50
 	w_price = 20
-	x_price = 90
-	y_price = 10
-	z_price = 50
-
+	x_price = 17
+	y_price = 20
+	z_price = 21
 
 	five_a_price = (a_price * int(skus.count("A") / 5) * 5 - int(skus.count("A") / 5) * 50)
 	left_a_count = skus.count("A") - int(skus.count("A") / 5) * 5
@@ -76,7 +75,7 @@ def checkout(skus):
 
 	total_price = total_price + i_price * skus.count("I")	
 	total_price = total_price + j_price * skus.count("J")	
-	total_price = total_price + 150 * int(skus.count("K") / 2) + k_price * (skus.count("K") % 2)
+	total_price = total_price + 120 * int(skus.count("K") / 2) + k_price * (skus.count("K") % 2)
 	total_price = total_price + l_price * skus.count("L")	
 	
 	m_count = 0
