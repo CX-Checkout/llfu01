@@ -126,6 +126,10 @@ def checkout(skus):
 		if it not in list_str:
 			skus = skus.replace(it, "")
 
+	skus = list(skus).sort()
+
+	for it in list_str:
+		
 	extra_count = int(len(skus) / 3)
 	last_index = len(skus) - extra_count * 3
 
