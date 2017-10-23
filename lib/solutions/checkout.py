@@ -128,9 +128,12 @@ def checkout(skus):
 
 	extra_count = int(len(skus) / 3)
 	last_index = len(skus) - extra_count * 3
-	sku = skus[-last_index:]
 
-	print sku, extra_count, sku, last_index
+	sku = ""
+	if last_index != 0:
+		sku = skus[-last_index:]
+
+	
 	total_price += extra_count * 45
 	for it in list(sku):
 		if it == "S":
