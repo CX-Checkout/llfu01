@@ -130,6 +130,9 @@ def checkout(skus):
 
 	total_count = 0
 	for it in list_str:
+		if (int(len(skus) / 3) == 0) and (len(skus) % 3 != 0):
+			break
+
 		while True:
 			try:
 				skus.remove(it)
