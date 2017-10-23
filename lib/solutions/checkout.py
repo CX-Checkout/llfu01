@@ -109,6 +109,19 @@ def checkout(skus):
 
 
 	total_price = total_price + q_price * real_q_count - 10 * int(real_q_count / 3)
+
+	total_price = total_price + r_price * skus.count("R")
+	total_price = total_price + s_price * skus.count("S")
+	total_price = total_price + t_price * skus.count("T")
+	total_price = total_price + (u_price * int(skus.count("U") / 4) * 3) + (u_price * (skus.count("U") % 4))
+
+
+
+	total_price = total_price + t_price * skus.count("X")
+	total_price = total_price + t_price * skus.count("Y")
+	total_price = total_price + t_price * skus.count("Z")
+
+
 	return total_price
 
 if __name__ == '__main__':
