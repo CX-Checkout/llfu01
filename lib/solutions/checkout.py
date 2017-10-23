@@ -126,10 +126,17 @@ def checkout(skus):
 		if it not in list_str:
 			skus = skus.replace(it, "")
 
-	skus = list(skus).sort()
+	skus = list(skus)
 
+	total_count = 0
 	for it in list_str:
-		
+		while True:
+			try:
+				skus.remove(it)
+				total_count += 1
+			except:
+				break
+
 	extra_count = int(len(skus) / 3)
 	last_index = len(skus) - extra_count * 3
 
@@ -158,6 +165,4 @@ def checkout(skus):
 	return total_price
 
 if __name__ == '__main__':
-    print checkout("STX")
-    print checkout("STXSTX")
-    print checkout("SSS")
+    print checkout("STXZZ")
