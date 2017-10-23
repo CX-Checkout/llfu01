@@ -127,6 +127,11 @@ def checkout(skus):
 	total_price = total_price + y_price * skus.count("Y")
 	total_price = total_price + z_price * skus.count("Z")
 
+	list_str = list["STXYZ"]
+	for it in letter_list:
+		if it not in list_str:
+			skus.replace(it, "")
+			
 	return total_price
 
 if __name__ == '__main__':
