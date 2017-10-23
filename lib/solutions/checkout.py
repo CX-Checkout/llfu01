@@ -29,6 +29,6 @@ def checkout(skus):
     	total_price -= 20 * int(skus.count("A") / 3)
 
     if skus.count("B") >= 2:
-    	total_price -= 15 * int(skus.count("A") / 2)
+    	total_price -= 15 * int(skus.count("B") / 2)
 
     return total_price
