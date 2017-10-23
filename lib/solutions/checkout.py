@@ -137,6 +137,8 @@ def checkout(skus):
 			except:
 				break
 
+	print skus, total_count
+
 	extra_count = int(len(skus) / 3)
 	last_index = len(skus) - extra_count * 3
 
@@ -165,4 +167,4 @@ def checkout(skus):
 	return total_price
 
 if __name__ == '__main__':
-    print checkout("STXZZ")
+    print checkout("STXZ")
