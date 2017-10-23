@@ -70,7 +70,7 @@ def checkout(skus):
 
 	five_h_price = (h_price * int(skus.count("H") / 10) * 10 - int(skus.count("H") / 10) * 20)
 	left_h_count = skus.count("H") - int(skus.count("H") / 10) * 10
-	three_h_price = (h_price * int(left_h_count / 5) * 5 - int(left_a_count / 5) * 5)
+	three_h_price = (h_price * int(left_h_count / 5) * 5 - int(left_h_count / 5) * 5)
 	double_left_h_count = left_h_count - int(left_h_count / 5) * 5
 	total_price = total_price + five_h_price + three_h_price + h_price * double_left_h_count
 
