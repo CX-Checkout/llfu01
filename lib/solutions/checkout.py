@@ -21,14 +21,13 @@ def checkout(skus):
 	d_price = 15
 	e_price = 40
 
-	b_count = skus.count("B")
-
 	five_a_price = (a_price * int(skus.count("A") / 5) * 5 - int(skus.count("A") / 5) * 50)
 	left_a_count = skus.count("A") - int(skus.count("A") / 5) * 5
 	three_a_price = (a_price * int(left_a_count / 3) * 3 - int(left_a_count / 3) * 20)
 	double_left_a_count = left_a_count - int(left_a_count / 3) * 3
 	total_price =  five_a_price + three_a_price + a_price * double_left_a_count
 
+	b_count = 0
 	b_count += skus.count("E") / 2
 	real_b_count = 0
 	if skus.count("B") > 0:
@@ -45,3 +44,6 @@ def checkout(skus):
 	total_price = total_price + e_price * skus.count("E")
 
 	return total_price
+
+if __name__ == '__main__':
+    print checkout("ABCDE")
