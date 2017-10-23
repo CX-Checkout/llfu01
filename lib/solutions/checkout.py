@@ -68,6 +68,15 @@ def checkout(skus):
 	total_price = total_price + (f_price * int(skus.count("F") / 3) * 2) + (f_price * (skus.count("F") % 3))
 	total_price = total_price + g_price * skus.count("G")	
 
+	five_h_price = (h_price * int(skus.count("H") / 10) * 10 - int(skus.count("H") / 5) * 20)
+	left_h_count = skus.count("H") - int(skus.count("H") / 10) * 10
+	three_h_price = (h_price * int(left_h_count / 5) * 5 - int(left_a_count / 5) * 5)
+	double_left_h_count = left_h_count - int(left_h_count / 5) * 5
+	total_price =  five_h_price + three_h_price + h_price * double_left_h_count
+
+	total_price = total_price + i_price * skus.count("I")	
+	total_price = total_price + j_price * skus.count("J")	
+
 	return total_price
 
 if __name__ == '__main__':
