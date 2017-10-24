@@ -130,7 +130,7 @@ def checkout(skus):
 
 	total_count = 0
 	for it in list_str:
-		if len(skus) = 3:
+		if len(skus) == 3:
 			if total_count % 3 == 0:
 				total_count += 3
 				skus = []
