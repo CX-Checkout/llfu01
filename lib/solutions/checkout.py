@@ -132,13 +132,16 @@ def checkout(skus):
 	for it in ["Z", "S", "T", "Y", "X"]:
 		print skus, total_count
 		if len(skus) == 3:
-			if total_count % 3 == 0:
+			print "++++++", (total_count % 3), len(skus)
+			if (total_count % 3) == 0:
 				total_count += 3
 				skus = []
 				break
 
+		print "*****", len(skus), total_count
 		if len(skus) < 3:
-			if total_count % 3 == 0:
+			if (total_count % 3) == 0:
+				print "****"
 				break
 
 		while True:
