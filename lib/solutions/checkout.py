@@ -129,7 +129,8 @@ def checkout(skus):
 	skus = list(skus)
 
 	total_count = 0
-	for it in list_str:
+	for it in ["Z", "S", "T", "Y", "X"]:
+		print skus, total_count
 		if len(skus) == 3:
 			if total_count % 3 == 0:
 				total_count += 3
@@ -149,16 +150,8 @@ def checkout(skus):
 
 	print skus, total_count
 
-	extra_count = int(len(skus) / 3)
-	last_index = len(skus) - extra_count * 3
-
-	sku = ""
-	if last_index != 0:
-		sku = skus[-last_index:]
-
-	
-	total_price += extra_count * 45
-	for it in list(sku):
+	total_price += (total_count / 3) * 45
+	for it in list(skus):
 		if it == "S":
 			total_price += s_price
 
@@ -177,4 +170,4 @@ def checkout(skus):
 	return total_price
 
 if __name__ == '__main__':
-    print checkout("STXZ")
+    print checkout("SSSZ")
