@@ -130,28 +130,29 @@ def checkout(skus):
 
 	total_count = 0
 	for it in ["Z", "S", "T", "Y", "X"]:
-		print skus, total_count
+		# print skus, total_count
 		if len(skus) == 3:
-			print "++++++", (total_count % 3), len(skus)
 			if (total_count % 3) == 0:
 				total_count += 3
 				skus = []
 				break
 
-		print "*****", len(skus), total_count
 		if len(skus) < 3:
 			if (total_count % 3) == 0:
-				print "****"
 				break
 
 		while True:
+			if len(skus) < 3:
+				if (total_count % 3) == 0:
+					break
+
 			try:
 				skus.remove(it)
 				total_count += 1
 			except:
 				break
 
-	print skus, total_count
+	# print skus, total_count
 
 	total_price += (total_count / 3) * 45
 	for it in list(skus):
@@ -174,3 +175,5 @@ def checkout(skus):
 
 if __name__ == '__main__':
     print checkout("SSSZ")
+    print checkout("STXS")
+    print checkout("STXZ")
